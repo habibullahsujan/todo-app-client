@@ -97,7 +97,7 @@ const Home = () => {
             <span className="font-semibold">Hello,{userTodo[0]?.userName}</span>
           ) : (
             <div className="text-center">
-              <label htmlFor="" className="font-semibold">
+              <label htmlFor="" className="font-semibold block">
                 Add your name to store your todo list.
               </label>
               <input
