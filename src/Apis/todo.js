@@ -2,7 +2,7 @@
 
 export const saveTodo = async (todo) => {
   if (todo) {
-    const url = "http://localhost:5000/user-todo";
+    const url = "https://my-todo-server.vercel.app/user-todo";
     const res = await fetch(url, {
       method: "POST",
       headers: {
@@ -18,7 +18,7 @@ export const saveTodo = async (todo) => {
 //delete todo
 export const deleteTodo = async (id) => {
   if (id) {
-    const url = `http://localhost:5000/user-todo?id=${id}`;
+    const url = `https://my-todo-server.vercel.app/user-todo?id=${id}`;
     const res = await fetch(url, {
       method: "DELETE",
     });
@@ -31,7 +31,7 @@ export const deleteTodo = async (id) => {
 export const editTodo = async (id, data) => {
   const editedText = data;
   if (id) {
-    const url = `http://localhost:5000/user-todo?id=${id}`;
+    const url = `https://my-todo-server.vercel.app/user-todo?id=${id}`;
     const res = await fetch(url, {
       method: "PUT",
       headers: {

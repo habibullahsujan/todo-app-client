@@ -20,7 +20,7 @@ const Home = () => {
   } = useQuery({
     queryKey: ["repoData"],
     queryFn: async () => {
-      const url = `http://localhost:5000/user-todo?useName=${userName? userName: names}`;
+      const url = `https://my-todo-server.vercel.app/user-todo?useName=${userName? userName: names}`;
       const res = await fetch(url);
       const data = await res.json();
       return data;
